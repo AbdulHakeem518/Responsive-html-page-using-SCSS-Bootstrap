@@ -1,0 +1,94 @@
+
+
+/*    All Mixins Defined     */
+
+@mixin bgimage($img-url, $bg-size:cover, $position: center center, $repeat:no-repeat){
+    background-image:url($img-url);
+    background-size: $bg-size;
+    background-position: $position;
+    background-repeat:no-repeat;
+}
+
+@mixin simple-flex($cont:center, $item:center){
+    display:flex;
+    justify-content: $cont;
+    align-items:$item;
+}
+
+@mixin simple-button($display, $bgcolor, $color, $pad, $border, $border-color){
+    display: $display;
+    background-color: $bgcolor;
+    color: $color;
+    font-size:17px;
+    padding: $pad;
+    font-weight: 400;
+    border-width: $border;
+    border-color: $border-color;
+    border-radius:0px;
+    position: relative;
+    background-image: linear-gradient($color7, $color7);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size .4s, color .4s;
+}
+
+@mixin simple-button-hover($bg-c:$color7, $bc:$color7, $c:$color11){
+    border-color: $bg-c;
+    color: $c;
+    background-position: 50% 50%;
+    background-image: linear-gradient($bg-c, $bg-c);
+    background-size: 100% 100%;
+}
+
+@mixin pseudo($cont:"", $top: 0, $left: 0, $z-index:1){
+    content: $cont;
+    position: absolute;
+    top: $top;
+    left: $left;
+    z-index: $z-index;
+}
+
+@mixin pseudo1($cont:"", $bottom: 0, $left: 0, $z-index:1){
+    content: $cont;
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+}
+
+@mixin pseudo2($cont:"", $top: 0, $right: 0, $z-index:1){
+    content: $cont;
+    position: absolute;
+    top: $top;
+    right: $right;
+    z-index: $z-index;
+}
+
+@mixin maxWith($mw){
+    width:100%;
+    max-width: $mw;
+}
+
+@mixin fsize($fsize, $lheight){
+   font-size: $fsize;
+   line-height: $lheight;
+}
+
+@mixin w-h-brd($wdth, $hght, $brd-radius:50%){
+    width: $wdth;
+    height: $hght;
+    border-radius: $brd-radius;
+ }
+
+ @mixin mbl-pseudo-tr($scale, $top, $right){
+    transform: scale($scale);
+    top: $top;
+    right: $right;
+ }
+
+ @mixin mbl-pseudo-tl($scale, $top, $left){
+    transform: scale($scale);
+    top: $top;
+    left: $left;
+ }

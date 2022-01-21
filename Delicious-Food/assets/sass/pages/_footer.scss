@@ -1,0 +1,16 @@
+
+
+footer{
+    background-color: $color1;
+    padding: 16px 0;
+}
+.bottom-ul{
+    li:not(:last-child){
+        margin-right:50px;
+    }
+    a{
+        color:$color11;
+        font-size:18px;
+        font-weight: 400;
+    }
+}

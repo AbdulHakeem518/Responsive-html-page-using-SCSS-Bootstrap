@@ -1,0 +1,407 @@
+
+
+/*      Custom Style For Home       */
+
+
+/*      Banner      */
+.banner{
+    @include bgimage("../images/home-banner.png",cover, center bottom);
+    padding:196px 0 96px;
+    &:before{
+        @include pseudo(url("../images/home-circle.png"), 50px, 15px);
+        transform: scale(0.8);
+    }
+    h1{
+        @include fsize(88px, 80px);
+        color: $color2;
+        margin-bottom: 37px;
+        span{
+            color:#000;
+        }
+    }
+    h2{
+        @include fsize(50px, 52px);
+        color: $color4;
+        margin-bottom: 38px;
+        span{
+            color: inherit;
+        }
+    }
+    p{
+        font-size: 41px;
+        font-weight: 500;
+        font-family: $eg-medium;
+    }
+}
+.home-form{
+    width: 100%;
+    max-width: 580px;
+    background: $color5;
+    border-top: 15px solid $color2;
+    border-bottom: 15px solid $color8;
+    padding: 55px 45px;
+    margin-top: 114px;
+    position: relative;
+    &:before{
+        @include pseudo(url("../images/home-form-circle.png"), calc(-179px / 2), calc(-151px / 2), -1);
+        transform: scale(0.8);
+    }
+    input.form-control{
+        font-size: inherit;
+        color: $color6;
+        border:3px solid $color2;
+        min-height:72px;
+        padding: 0 25px;
+        &::placeholder{
+            font-size: inherit;
+            color: $color6;
+        }
+        &:focus{
+            box-shadow:unset;
+        } 
+    }
+    .btn{
+        @include simple-button(block, $color1, #fff, 17px 70px, 2px, $color1);
+        margin: 47px auto 0;
+        &:hover{
+            @include simple-button-hover($color2);
+        }
+    }
+}
+
+/*      How it Work      */
+.how-it-works{
+    padding: 70px 0 0;
+    h2{
+        margin: 0 0 105px;
+    }
+    .row{
+        .col-xl-3:nth-child(2) .works-service{
+            background-color: #f4d9aa;
+        }
+        .col-xl-3:nth-child(4) .works-service{
+            background-color: #f6e1bc;
+        }
+    }
+}
+.works-service{
+    background-color: $color9;
+    border-radius: 70px;
+    img{
+        margin-top: calc(-124px / 2);
+    }
+    h4{
+        font-size: 22px;
+        margin: 22px 0 6px;
+        a{
+            color:inherit;
+        }
+    }
+    p{
+        color: $color10;
+        padding:0 18px 50px;
+        line-height: 25px;
+        margin:0;
+    }
+    &:hover{
+        .service-border{
+            &:before{
+                opacity:1;
+            }
+        }
+        p{
+            color: #212121;
+        }
+    }
+}
+.service-border{
+    border-radius: 70px;
+    overflow: hidden;
+    &:before{ 
+        @include pseudo1();
+        width:100%;
+        height: 17px;
+        background-color: $color1;
+        opacity:0.6;
+    }
+}
+
+/*      Bon Apetit      */
+.bon-apetit{
+    padding: 145px 0 120px;
+    overflow:hidden;
+    &:after{
+        @include pseudo2(url("../images/green-peppers.png"), 0, -80px, -1);
+    }
+    h2{
+        margin:0 0 32px;
+    }
+    p{
+        color: #969191;
+        line-height: 22px;
+        @include maxWith(430px);
+        margin-bottom:20px;
+    }
+    .btn{
+        @include simple-button(inline-block, $color1, $color11, 17px 15px, 2px, $color1);
+        &:hover{
+            @include simple-button-hover($color2);
+        }
+    }
+}
+.bon-apetit-right{
+    padding-left:10%;
+}
+
+
+/*      Our Menu      */
+.our-menu{
+    &:before{
+        @include pseudo("", 0, 0, -1);
+        @include bgimage("../images/menu-img.png", 35%, top left);
+        width: 100%;
+        height: 850px;
+    }
+    h2{
+        margin: 0 0 76px;
+    }
+    
+}
+.mh-720{
+    min-height: 720px;
+}
+.menu-box{
+    .menu-box-content{
+        background-color: #ebebeb;
+        border-bottom:12px solid $color2;
+        padding:26px 23px 23px;
+    }
+    h4{
+        font-size:17px;
+        color: $color12;
+        a{
+            color:inherit;
+            &:hover{
+                color: $color1;
+            }
+        }
+    }
+    p{
+        color: #2b2b2b;
+        font-size: 17px;
+        font-weight: 900;
+        margin:0;
+    }
+}
+.heart-icon{
+    @include simple-flex();
+    @include w-h-brd(25px, 25px);
+    border: 1px solid #bcbcbc;
+    cursor: pointer;
+    i{
+        color: #bcbcbc;
+        &.heart-icon-active{
+            color: $color1;
+        }
+    }
+}
+.owl-carousel{
+    .owl-nav{
+        @include pseudo2("", -60px, 0);
+        button{
+            background: #909090 !important;
+            @include w-h-brd(35px !important, 35px !important, 0 !important);
+            color: $color11 !important;
+            font-size: 35px !important;
+            &:focus{
+                outline: none;
+            }
+            span{
+                position: relative;
+                top: -2px;
+            }
+        }
+    }
+}
+.owl-theme{
+    .owl-nav [class*=owl-]:hover{
+        background: $color2 !important;
+    }
+} 
+
+
+/*      Our Plan      */
+.our-plan{
+    padding: 90px 0 0;
+    overflow:hidden;
+    h2{
+        margin:0 0 8px;
+    }
+    .sub-heading{
+        @include maxWith(497px);
+        margin:0 auto 55px;
+    }
+    &:after{
+        @include pseudo2(url("../images/home-circle.png"), 0, -10px, -1);
+    }
+}
+.our-plan-box{
+    margin-bottom:30px;
+    h3{
+        @include fsize(28px, 31px);
+        color: #282828;
+        font-weight: 600;
+        a{
+            color: inherit;
+            &:hover{
+                color: $color1;
+            }
+        }
+    }
+    h6,p{
+        font-size: 22px;
+    }
+    h6{
+        color: #7f7f7f;
+        font-weight: 400;
+    }
+    p{
+        color: #454545;
+        font-weight: 500;
+        margin: 0 0 20px;
+    }
+    .btn{
+        @include simple-button(block, $color2, #fff, 12px 10px, 2px, $color2);
+        @include maxWith(216px);
+        &:hover{
+            @include simple-button-hover($color1, $color1);
+        }
+    }
+}
+
+
+/*      LifeSyle      */
+.liftstyle{
+    padding: 120px 0 115px;
+    overflow:hidden;
+    &:before{
+        @include pseudo(url("../images/empty-dish.png"), 0, 0, -1);
+    }
+    h2{
+        margin: 0 0 40px;
+    }
+    p{
+        line-height: 24px;
+        color: #969191;
+        @include maxWith(575px);
+        margin:0 0 25px;
+        span{
+            color: #333;
+            font-size: 20px;
+        }
+    }
+    .social-ul{
+        li:not(:last-child){
+            margin-right:17px;
+        }
+        a{
+            @include simple-flex();
+            @include w-h-brd(30px, 30px);
+            background-color: #dfdede;
+            color:#030303;
+            &:hover{
+                color: #36b6ff;
+            }
+        }
+    }
+}
+
+
+/*      FAQ      */
+.faq{
+    @include bgimage("../images/home-faq-banner.png");
+    padding:35px 0;
+    &:before{
+        @include pseudo("", -61px, 0);
+        width:100%;
+        height:61px;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        background-color: $color1;
+    }
+    &:after{
+        @include pseudo("", 0, 0);
+        background-color:rgba(181,179,93,.85);
+        width: 100%;
+        height:100%;
+    }
+    h2{
+        color:$color11;
+    }
+    .container{
+        z-index:3;
+    }
+}
+.faq-wrapper{
+    &:before,
+    &:after{
+        transform:translateY(-50%);
+    }
+    &:before{
+        @include pseudo(url("../images/faq-img1.png"), 50%, 0, 2);
+    }
+    &:after{
+        @include pseudo2(url("../images/faq-img2.png"), 50%, 0, 2);
+    }
+}
+.accordion{
+    @include maxWith(752px);
+    overflow: hidden;
+    margin:45px auto 0;
+    .card{
+        border-radius: 8px !important;
+        margin-bottom: 20px;
+        overflow: hidden;
+        a,p{
+            @include fsize(20px, 25px);
+        }
+        p{
+            color: #2e2d2d;
+        }
+    }
+    .card-header{
+        background-color: #e3e1e3;
+        border: none;
+        a{
+            display: block;
+            color: #353535;
+            i{
+                color:inherit;
+            }
+        }
+        i.fa-minus{
+          color: #a7a7a7;  
+        }
+    }
+    .card-body{
+        padding: 47px 30px;
+    }
+    .card-link{
+        position: relative;
+        padding: 25px 50px 25px 28px;
+        i{
+            @include pseudo2("", 50%, 18px);
+            font-size:17px;
+            border:2px solid;
+            @include simple-flex();
+            @include w-h-brd(25px, 25px);
+            transform:translateY(-50%);
+        }
+    }
+}
+
+
+/*    animation     */
+// @keyframes rotate360 {
+//     from {transform: rotate(0deg);}
+//     to {transform: rotate(360deg);}
+// }

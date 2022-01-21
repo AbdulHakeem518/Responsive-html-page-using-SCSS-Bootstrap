@@ -1,0 +1,61 @@
+
+
+/*     Common Style Here     */
+
+body{
+    font-family: $robot;
+    font-weight: $fw;
+    font-size: $normal-fs;
+    color: $body-color;
+    line-height: $body-line-height;
+    transition: $body-transition;
+}
+h1,h2{
+    font-family: $eg-bold;
+}
+h2{
+   color: $color2;
+   font-size: 48px;
+   span{
+       color:$color7;
+   }
+}
+img{
+    max-width:100%;
+}
+.container{
+    width: 100%;
+    max-width:1300px;
+}
+ul{
+    list-style-type: none;
+    margin:0;
+    padding-left:0;
+}
+a,a:hover{
+    text-decoration:none;
+}
+i{
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+.owl-carousel{
+    .owl-nav.disabled,.owl-nav{
+        display: block;
+    }
+} 
+.sub-heading{
+    color: #969191;
+    font-size:22px;
+    line-height: 31px;
+}
+.relative{
+    position: relative;
+}
+.navbar-toggler{
+    margin-left:20px;
+    &:focus{
+        outline:none;
+    }
+}
+

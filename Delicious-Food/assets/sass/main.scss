@@ -1,0 +1,24 @@
+
+
+
+/*      Theme control files    */
+
+@import "theme-layout/variables";
+@import "theme-layout/font";
+@import "theme-layout/theme-control";
+@import "theme-layout/mixin";
+
+
+
+
+/*     Pages  Styles         */
+
+@import "pages/header";
+@import "pages/home";
+@import "pages/footer";
+
+
+
+/*     Responsiveness        */
+
+@import "theme-layout/responsive";

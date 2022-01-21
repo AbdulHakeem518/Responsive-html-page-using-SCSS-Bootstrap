@@ -1,0 +1,38 @@
+
+header{
+    background-color: $color2;
+    padding: 19px 0;
+    position: relative;
+    z-index: 9;
+    .bg-light{
+        background-color: transparent !important;
+    }
+    .navbar-light{
+        .navbar-nav{
+            .nav-link{
+                color:#fff;
+                font-size:17px;
+                &:hover,
+                &:focus,
+                &.active{
+                    color: $color3;
+                }
+            }
+            .nav-item:not(:last-child){
+                margin-right:20px;
+            }
+        } 
+    }
+    .social-ul{
+        li:not(:last-child){
+            margin-right:28px;
+       }
+       a{
+         color:#fff;
+         font-size: 17px;
+         &:hover{
+             color:#000;
+         }
+       }
+    } 
+}

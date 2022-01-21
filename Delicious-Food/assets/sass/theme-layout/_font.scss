@@ -1,0 +1,14 @@
+
+// Heading Fonts
+@font-face {
+    font-family: $eg-bold;
+    src: url(theme-layout/fonts/Eigerdals-bold.ttf);
+}
+@font-face {
+    font-family: $eg-medium;
+    src: url(theme-layout/fonts/Eigerdals-Medium.ttf);
+}
+
+// Body Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
